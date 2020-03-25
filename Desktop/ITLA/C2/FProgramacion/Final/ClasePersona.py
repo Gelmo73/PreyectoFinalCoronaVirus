@@ -139,7 +139,7 @@ class Persona:
     @staticmethod
     def RestriccionNumeroDocumento(documento):
 
-        print('Escriba el numero de su documento:')
+        print(f'Escriba el numero de su {documento}:')
         num_doc = input()
 
         if documento == 'Cedula de Identidad':
@@ -171,9 +171,11 @@ class Persona:
         while True:
             Limpiar()
             try:
-                print('Escriba su dia, mes y año de nacimiento (en numeros)')
+                print('Fecha de nacimiento: Dia (en numeros)')
                 dd = int(input())
+                print('Fecha de nacimiento: Mes (en numeros)')
                 mm = int(input())
+                print('Fecha de nacimiento: Año (en numeros)')
                 yy = int(input())
                 return datetime.date(yy, mm, dd)
             except Exception as e:

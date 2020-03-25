@@ -8,13 +8,16 @@ from unidecode import unidecode  # Buscar que es
 def Limpiar():
     os.system('cls')
 
+
 def Continuar():
     print('Presione [Enter] para continuar')
     input()
 
+
 def OpcionInvalida():
     print('Opcion no valida')
     Continuar()
+
 
 """
 Datos de ejemplo:
@@ -129,76 +132,88 @@ def ValidarEmail(email):
         return False
 
 
-jsonstr = {
-    "Capricornio": {
+jsonstr = [
+    {
+        "Nombre": "Capricornio",
         "Enfermos": 0,
         "Recuperados": 0,
         "Muertos": 0
     },
 
-    "Acuario": {
+    {
+        "Nombre": "Acuario",
         "Enfermos": 0,
         "Recuperados": 0,
         "Muertos": 0
     },
 
-    "Piscis": {
+    {
+        "Nombre": "Piscis",
         "Enfermos": 0,
         "Recuperados": 0,
         "Muertos": 0
     },
 
-    "Aries": {
+    {
+        "Nombre": "Aries",
         "Enfermos": 0,
         "Recuperados": 0,
         "Muertos": 0
     },
 
-    "Tauro": {
+    {
+        "Nombre": "Tauro",
         "Enfermos": 0,
         "Recuperados": 0,
         "Muertos": 0
     },
 
-    "Geminis": {
+    {
+        "Nombre": "Geminis",
         "Enfermos": 0,
         "Recuperados": 0,
         "Muertos": 0
     },
 
-    "Cancer": {
+    {
+        "Nombre": "Cancer",
         "Enfermos": 0,
         "Recuperados": 0,
         "Muertos": 0
     },
 
-    "Leo": {
+    {
+        "Nombre": "Leo",
         "Enfermos": 0,
         "Recuperados": 0,
         "Muertos": 0
     },
 
-    "Virgo": {
+    {
+        "Nombre": "Virgo",
         "Enfermos": 0,
         "Recuperados": 0,
         "Muertos": 0
     },
 
-    "Libra": {
+    {
+        "Nombre": "Libra",
         "Enfermos": 0,
         "Recuperados": 0,
         "Muertos": 0
     },
 
-    "Escorpio": {
+    {
+        "Nombre": "Escorpio",
         "Enfermos": 0,
         "Recuperados": 0,
         "Muertos": 0
     },
 
-    "Sagitario": {
+    {
+        "Nombre": "Sagitario",
         "Enfermos": 0,
         "Recuperados": 0,
         "Muertos": 0
     }
-}
+]

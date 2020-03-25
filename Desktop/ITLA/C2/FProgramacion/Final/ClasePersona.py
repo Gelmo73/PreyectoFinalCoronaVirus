@@ -36,6 +36,18 @@ class Persona:
 {Fore.RED} Provincia: {Fore.WHITE} {self.provincia}  {Fore.RED} Coordenadas: {Fore.WHITE} {self.coordenadas}       
         '''
 
+    def ExportarTelegram(self):
+        return f'''
+Documento: {self.documento} [{self.num_doc}]
+Nacionalidad: {self.nacionalidad}
+Nombre: {self.nombre} {self.apellido}  Sexo: {self.sexo}
+Fecha de Nacimiento: {datetime.date.strftime(self.fecha,'%d/%m/%Y')}
+Signo Zodiacal: {self.zodiaco}
+Estado: {self.estado}
+Telefono: {self.tel}  Email: {self.email}
+Provincia: {self.provincia}   Coordenadas: {self.coordenadas}       
+        '''
+
     def setEstado(self, listado_mistico):
         Limpiar()
 

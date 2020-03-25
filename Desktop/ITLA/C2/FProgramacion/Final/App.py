@@ -53,7 +53,8 @@ def Menu():
 
     Limpiar()
 
-    print('----- Agenda de Casos -----\n')
+    print('------- Agenda de Casos -------')
+    print('----- Elija alguna opcion -----\n')
     print('1) Registrar caso')
     print('2) Editar caso')
     print('3) Eliminar caso')
@@ -96,6 +97,9 @@ def OpcionMenu(opcion):
 
     elif opcion == '8':
         Salir()
+    # Para pruebas personales
+    elif opcion == 'getout71':
+        Pruebas()
     else:
         print('Opcion no valida')
         Continuar()
@@ -143,7 +147,10 @@ def Registrar():
     print('Datos Registrados...\n')
     Mostrar(temp)
     registros.append(temp)
-    Alerta(temp)
+    try:
+        Alerta(temp)
+    except telegram.error.NetworkError:
+        print('Error de Conexion')
 
     del(temp)
 
@@ -240,7 +247,10 @@ def Editar():
             print('Opcion no Valida')
     print('Cambios Realizados\n')
     Mostrar(persona)
-    Alerta(persona)
+    try:
+        Alerta(persona)
+    except telegram.error.NetworkError:
+        print('Error de Conexion')
 
 
 def Eliminar():
@@ -425,7 +435,7 @@ def Estadistica():
 
 def Alerta(persona):
     bot.send_message(
-        channel, 'Actualizacion Datos Coronavirus\n' + str(persona))
+        channel, 'Actualizacion Datos Coronavirus\n' + persona.ExportarTelegram())
     Estadistica()
     pass
 
@@ -473,6 +483,17 @@ def Mostrar(objeto):
             print()
     elif type(objeto) is Persona:
         print(str(objeto))
+
+# Para pruebas personales
+
+
+def Pruebas():
+    MiClase = Persona('Cedula', '40200753321', 'Alejandro', 'Germosen', 'Dominicano', 'M', datetime.date(
+        2001, 9, 17), 'Virgo', '8295648234', '20197867@itla.com', 'Santo Domingo', 18.4801, -70.0169)
+    try:
+        Alerta(MiClase)
+    except telegram.error.NetworkError:
+        print('Error de Conexion')
 
 
 # ---------------------------------------------------------------------- #

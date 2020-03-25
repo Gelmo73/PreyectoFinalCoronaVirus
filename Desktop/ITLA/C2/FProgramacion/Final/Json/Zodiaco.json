@@ -1,0 +1,50 @@
+[
+  {
+    "Nombres": ["Capricornio", "Acuario"],
+    "DiaDeCambio": 19
+  },
+  {
+    "Nombres": ["Acuario", "Piscis"],
+    "DiaDeCambio": 18
+  },
+  {
+    "Nombres": ["Piscis", "Aries"],
+    "DiaDeCambio": 20
+  },
+  {
+    "Nombres": ["Aries", "Tauro"],
+    "DiaDeCambio": 19
+  },
+  {
+    "Nombres": ["Tauro", "Geminis"],
+    "DiaDeCambio": 20
+  },
+  {
+    "Nombres": ["Geminis", "Cancer"],
+    "DiaDeCambio": 20
+  },
+  {
+    "Nombres": ["Cancer", "Leo"],
+    "DiaDeCambio": 22
+  },
+  {
+    "Nombres": ["Leo", "Virgo"],
+    "DiaDeCambio": 22
+  },
+  {
+    "Nombres": ["Virgo", "Libra"],
+    "DiaDeCambio": 22
+  },
+  {
+    "Nombres": ["Libra", "Escorpio"],
+    "DiaDeCambio": 22
+  },
+  {
+    "Nombres": ["Escorpio", "Sagitario"],
+    "DiaDeCambio": 21
+  },
+  {
+    "Nombres": ["Sagitario", "Capricornio"],
+    "DiaDeCambio": 21
+  }
+]

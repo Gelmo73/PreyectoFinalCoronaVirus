@@ -1,0 +1,157 @@
+[
+  {
+    "name": "Azua",
+    "lat": 18.4531898,
+    "lon": -70.7349014
+  },
+  {
+    "name": "Bahoruco",
+    "lat": 18.5,
+    "lon": -71.35
+  },
+  {
+    "name": "Barahona",
+    "lat": 18.20854,
+    "lon": -71.100769
+  },
+  {
+    "name": "Dajabón",
+    "lat": 19.5487804,
+    "lon": -71.7082901
+  },
+  {
+    "name": "Duarte",
+    "lat": 19.25,
+    "lon": -70.08333
+  },
+  {
+    "name": "Elías Piña",
+    "lat": 18.8775005,
+    "lon": -71.7027817
+  },
+  {
+    "name": "El Seibo",
+    "lat": 18.9836407,
+    "lon": -69.0475998
+  },
+  {
+    "name": "Espaillat",
+    "lat": 19.3935204,
+    "lon": -70.5259781
+  },
+  {
+    "name": "Hato Mayor",
+    "lat": 18.7627792,
+    "lon": -69.256813
+  },
+  {
+    "name": "Hermanas Mirabal",
+    "lat": 19.3776207,
+    "lon": -70.4176178
+  },
+  {
+    "name": "Independencia",
+    "lat": 18.4324836,
+    "lon": -71.8856491
+  },
+  {
+    "name": "La Altagracia",
+    "lat": 19.012148,
+    "lon": -69.8543574
+  },
+  {
+    "name": "La Romana",
+    "lat": 18.4328596,
+    "lon": -69.0425614
+  },
+  {
+    "name": "La Vega",
+    "lat": 19.2207244,
+    "lon": -70.5632122
+  },
+  {
+    "name": "María Trinidad Sánchez",
+    "lat": 19.4409216,
+    "lon": -70.2243662
+  },
+  {
+    "name": "Monseñor Nouel",
+    "lat": 18.9278363,
+    "lon": -70.5249464
+  },
+  {
+    "name": "Monte Cristi",
+    "lat": 19.845275,
+    "lon": -71.6621448
+  },
+  {
+    "name": "Monte Plata",
+    "lat": 18.8100971,
+    "lon": -69.7996617
+  },
+  {
+    "name": "Pedernales",
+    "lat": 18.0407551,
+    "lon": -71.7588681
+  },
+  {
+    "name": "Peravia",
+    "lat": 18.3508168,
+    "lon": -70.5084733
+  },
+  {
+    "name": "Puerto Plata",
+    "lat": 19.7896057,
+    "lon": -70.7211021
+  },
+  {
+    "name": "Samaná",
+    "lat": 19.1740922,
+    "lon": -69.5758103
+  },
+  {
+    "name": "San Cristóbal",
+    "lat": 18.4354089,
+    "lon": -70.1892459
+  },
+  {
+    "name": "San José de Ocoa",
+    "lat": 18.5432349,
+    "lon": -70.5152965
+  },
+  {
+    "name": "San Juan",
+    "lat": 18.8104432,
+    "lon": -71.247879
+  },
+  {
+    "name": "San Pedro de Macorís",
+    "lat": 18.4697217,
+    "lon": -69.337519
+  },
+  {
+    "name": "Sánchez Ramírez",
+    "lat": 19.0070714,
+    "lon": -70.2825788
+  },
+  {
+    "name": "Santiago",
+    "lat": 19.3593476,
+    "lon": -71.1999708
+  },
+  {
+    "name": "Santiago Rodríguez",
+    "lat": 19.4712135,
+    "lon": -71.3418885
+  },
+  {
+    "name": "Santo Domingo",
+    "lat": 18.4801923,
+    "lon": -70.016921
+  },
+  {
+    "name": "Valverde",
+    "lat": 19.6380052,
+    "lon": -71.1846908
+  }
+]

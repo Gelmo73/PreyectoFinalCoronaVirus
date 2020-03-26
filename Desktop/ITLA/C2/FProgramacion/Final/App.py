@@ -16,6 +16,7 @@ init()
 # ---------------------------------------------------------------------- #
 
 upath = os.environ['USERPROFILE'] + '/Desktop/'
+global registros, provincias, numeros_misticos
 registros = list()
 provincias = list()
 numeros_misticos = dict()
@@ -74,7 +75,7 @@ def OpcionMenu(opcion):
         Continuar()
 
     elif opcion == '2':
-        Editar()
+        Editar(numeros_misticos)
         Continuar()
 
     elif opcion == '3':
@@ -155,7 +156,7 @@ def Registrar():
     del(temp)
 
 
-def Editar():
+def Editar(numeros_misticos):
     Limpiar()
     Mostrar(registros)
     print('Seleccione el registro:')
@@ -168,6 +169,8 @@ def Editar():
             return
     except:
         print('Algo salio mal')
+        Continuar()
+        return
 
     while True:
         Limpiar()
@@ -245,6 +248,7 @@ def Editar():
             break
         else:
             print('Opcion no Valida')
+            Continuar()
     print('Cambios Realizados\n')
     Mostrar(persona)
     try:
@@ -276,7 +280,7 @@ def Eliminar():
 
     if input() == 'CONFIRMAR':
         numeros_misticos[persona.zodiaco][persona.estado + 's'] -= 1
-        registros.pop(persona)
+        registros.pop(nregistro)
         print('Registro Eliminado')
     else:
         print('Eliminacion cancelada')
@@ -317,20 +321,29 @@ def Exportar():
             html = html.replace('<!-- REGISTROS -->', temp)
             break
         elif opcion == 'U':
+            lista = registros
             while True:
 
                 Limpiar()
-                Mostrar(registros)
+                Mostrar(lista)
 
-                print('Seleccione el registro:')
+                print(
+                    'Seleccione el registro: [b] para realizar busqueda por nombre')
+                opcion = input()
+
+                if opcion == 'b':
+                    print('Escriba el nombre a buscar:')
+                    valor = input().lower()
+                    lista = Utilidades.Buscar(valor, registros)
+                    pass
 
                 try:
-                    nregistro = int(input()) - 1
+                    nregistro = int(opcion) - 1
 
-                    if not (0 <= nregistro < len(registros)):
+                    if not (0 <= nregistro < len(lista)):
                         OpcionInvalida()
                     else:
-                        persona = registros[nregistro]
+                        persona = lista[nregistro]
                         break
                 except:
                     print('Algo salio mal')
@@ -345,13 +358,13 @@ def Exportar():
             html = html.replace('<!--Nacionalidad-->', persona.nacionalidad)
             html = html.replace('<!--Telefono-->', persona.tel)
             html = html.replace('<!--FechaNacimiento-->', datetime.date.strftime(persona.fecha,
-                                                                                 '%d/%m/$Y'))
+                                                                                 '%d/%m/%Y'))
             html = html.replace('<!--SignoZodiacal-->', persona.zodiaco)
             html = html.replace('<!--Sexo-->', persona.sexo)
             html = html.replace('<!--Estado-->', persona.estado)
             html = html.replace('<!--Email-->', persona.email)
             html = html.replace('<!--Provincia-->', persona.provincia)
-            html = html.replace('<!--Coordenadas-->', (persona.coordenadas))
+            html = html.replace('<!--Coordenadas-->', str(persona.coordenadas))
 
             break
 
@@ -391,7 +404,7 @@ def Mapa():
         tmp = '''
  L.marker(['''+str(persona.coordenadas[0])+''', '''+str(persona.coordenadas[1])+'''])
         .addTo(map)
-        .bindPopup("'''+str(persona)+'''")
+        .bindPopup(`'''+persona.ExportarTelegram()+'''`)
         .openPopup();    
         '''
         markers.append(tmp)
@@ -422,10 +435,10 @@ def Estadistica():
     temp = ''
     for signo in numeros_misticos:
         temp += f'''
- --- {signo["Nombre"]} ---
- Enfermos: {signo["Enfermos"]}
- Recuperados: {signo["Recuperados"]}
- Muertos: {signo["Muertos"]} 
+ --- {numeros_misticos[signo]["Nombre"]} ---
+ Enfermos: {numeros_misticos[signo]["Enfermos"]}
+ Recuperados: {numeros_misticos[signo]["Recuperados"]}
+ Muertos: {numeros_misticos[signo]["Muertos"]} 
  \n         
         '''
     bot.send_message(channel, 'Estadistica Mistica\n' + temp)

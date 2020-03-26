@@ -132,88 +132,102 @@ def ValidarEmail(email):
         return False
 
 
-jsonstr = [
-    {
+def Buscar(valor, listado):
+
+    encontrados = []
+    for registro in listado:
+        if (registro.nombre + registro.apellido).lower().find(valor) >= 0:
+            encontrados.append(registro)
+    if len(encontrados) > 0:
+        return encontrados
+    else:
+        print('Ningun registro coicidente')
+        Continuar()
+        return listado
+
+
+jsonstr = {
+    "Capricornio": {
         "Nombre": "Capricornio",
         "Enfermos": 0,
         "Recuperados": 0,
         "Muertos": 0
     },
 
-    {
+    "Acuario": {
         "Nombre": "Acuario",
         "Enfermos": 0,
         "Recuperados": 0,
         "Muertos": 0
     },
 
-    {
+    "Piscis": {
         "Nombre": "Piscis",
         "Enfermos": 0,
         "Recuperados": 0,
         "Muertos": 0
     },
 
-    {
+    "Aries": {
         "Nombre": "Aries",
         "Enfermos": 0,
         "Recuperados": 0,
         "Muertos": 0
     },
 
-    {
+    "Tauro": {
         "Nombre": "Tauro",
         "Enfermos": 0,
         "Recuperados": 0,
         "Muertos": 0
     },
 
-    {
+    "Geminis": {
         "Nombre": "Geminis",
         "Enfermos": 0,
         "Recuperados": 0,
         "Muertos": 0
     },
 
-    {
+    "Cancer": {
         "Nombre": "Cancer",
         "Enfermos": 0,
         "Recuperados": 0,
         "Muertos": 0
     },
 
-    {
+    "Leo": {
         "Nombre": "Leo",
         "Enfermos": 0,
         "Recuperados": 0,
         "Muertos": 0
     },
 
-    {
+    "Virgo": {
         "Nombre": "Virgo",
         "Enfermos": 0,
         "Recuperados": 0,
         "Muertos": 0
     },
 
-    {
+    "Libra": {
         "Nombre": "Libra",
         "Enfermos": 0,
         "Recuperados": 0,
         "Muertos": 0
     },
 
-    {
+    "Escorpio": {
         "Nombre": "Escorpio",
         "Enfermos": 0,
         "Recuperados": 0,
         "Muertos": 0
     },
 
-    {
+    "Sagitario": {
         "Nombre": "Sagitario",
         "Enfermos": 0,
         "Recuperados": 0,
         "Muertos": 0
     }
-]
+}

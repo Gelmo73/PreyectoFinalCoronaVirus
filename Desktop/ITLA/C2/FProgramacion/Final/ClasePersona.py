@@ -29,7 +29,7 @@ class Persona:
 {Fore.RED} Documento: {Fore.WHITE} {self.documento} [{self.num_doc}]
 {Fore.RED} Nacionalidad: {Fore.WHITE} {self.nacionalidad}
 {Fore.RED} Nombre: {Fore.WHITE} {self.nombre} {self.apellido}  {Fore.RED} Sexo: {Fore.WHITE} {self.sexo}
-{Fore.RED} Fecha de Nacimiento: {Fore.WHITE} {datetime.date.strftime(self.fecha,'%d/%m/$Y')}
+{Fore.RED} Fecha de Nacimiento: {Fore.WHITE} {datetime.date.strftime(self.fecha,'%d/%m/%Y')}
 {Fore.RED} Signo Zodiacal: {Fore.WHITE} {self.zodiaco}
 {Fore.RED} Estado: {Fore.GREEN} {self.estado}
 {Fore.RED} Telefono: {Fore.WHITE} {self.tel}  {Fore.RED} Email: {Fore.WHITE} {self.email}
@@ -53,6 +53,7 @@ Provincia: {self.provincia}   Coordenadas: {self.coordenadas}
 
         if self.estado == 'Recuperado' or self.estado == 'Muerto':
             print(f'Su estado no puede ser cambiado de {self.estado}')
+            Continuar()
             return listado_mistico
 
         while True:
@@ -189,9 +190,13 @@ Provincia: {self.provincia}   Coordenadas: {self.coordenadas}
                 mm = int(input())
                 print('Fecha de nacimiento: Año (en numeros)')
                 yy = int(input())
-                return datetime.date(yy, mm, dd)
-            except Exception as e:
-                print('Algo salio mal' + str(e))
+                if 1900 <= yy <= 2020:
+                    return datetime.date(yy, mm, dd)
+                else:
+                    print('No es una fecha valida')
+                    input()
+            except:
+                print('Algo salio mal')
                 input()
 
     @staticmethod
